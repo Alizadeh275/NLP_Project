@@ -10,7 +10,7 @@ Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bo
 
 ![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/paper_results.PNG)
 
-__Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper result__.
+__Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results__.
 
 ## Requirements
 
