@@ -296,6 +296,9 @@ python APE/FiD/test.py \
 [02/01/2022 20:22:01] {test.py:65} INFO - total number of example 3610
 [02/01/2022 20:22:01] {test.py:136} INFO - EM 39.128542
 ```
+> Conclusion: <br /> The reached EM is low than APE-FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation).
+
+
 ## Pre-trained Models
 
 You can download pretrained models here:
