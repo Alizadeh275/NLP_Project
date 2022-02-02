@@ -32,7 +32,7 @@ pip install -r requirements.txt
 bash APE/scripts/download-data.sh
 ```
 #### Note: There is `no access` to this dataset and it was forbidden!
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden message.PNG)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
 
 3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
 
