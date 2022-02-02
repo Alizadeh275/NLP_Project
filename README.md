@@ -8,7 +8,7 @@ In this repository we tried to compare two paper expriments: [FiD-base](https://
 
 Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bottom:
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/paper_results.PNG)
 
 __Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper result__.
 
