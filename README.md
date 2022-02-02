@@ -20,13 +20,13 @@ To install all requirements go to notebooks folder and run this command:
 pip install -r requirements.txt
 ```
 
-1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
+### 1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
 
 ```setup
 !git clone https://github.com/uclnlp/APE
 ```
 
-2. Download APE data using follow bash command:
+### 2. Download APE data using follow bash command:
 ```setup
 %%shell
 bash APE/scripts/download-data.sh
@@ -34,13 +34,13 @@ bash APE/scripts/download-data.sh
 #### Note: There is `no access` to this dataset and it was forbidden!
 ![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
 
-3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
+### 3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
 
 ```setup
 !git clone https://github.com/facebookresearch/FiD.git
 ```
 
-4. Download FiD data using follow bash command:
+### 4. Download FiD data using follow bash command:
 
 ```setup
 %%shell
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     passages = util.load_passages(save_dir/'psgs_w100.tsv')
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
-5. So, we decide to split downloaded data to 8 parts (We will use one of part):
+### 5. So, we decide to split downloaded data to 8 parts (We will use one of part):
 
 ```setup
 import pandas as pd
