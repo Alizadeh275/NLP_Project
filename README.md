@@ -135,6 +135,9 @@ if __name__ == "__main__":
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
 
+We do not consider all passages, so  we should consider index of existed passages,<br /> 
+So we should change `select_examples_NQ` and `select_examples_TQA` methods in FiD/src/preprocess.py
+
 You should change FiD/src/util.py to load csv file (`reader = csv.reader(fin)`):
 ```setup
 def load_passages(path):
