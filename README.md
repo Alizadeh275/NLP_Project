@@ -1,7 +1,4 @@
-# NLP_Project
->📋  A template README.md for code accompanying a Machine Learning paper
-
-# My Paper Title
+# Training Adaptive Computation for Open-Domain Question Answering with Computational Constraints
 
 This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
 
