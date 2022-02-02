@@ -255,13 +255,23 @@ After running of preprocess.py, three files created in open_domain_data/NQ folde
 - test.py
 - dev.py
 - 
-## Training
+### Train
 
-To train the model(s) in the paper, run this command:
+[`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
+```shell
+%%shell
+
+python APE/FiD/train.py \
+  --checkpoint_dir checkpoint \
+  --train_data_path open_domain_data/NQ/train.json \
+  --dev_data_path open_domain_data/NQ/dev.json \
+  --model_size base \
+  --per_gpu_batch_size 4 \
+  --n_context 1 \
+  --name my_experiment \
+  --eval_freq 1000
+```  
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
