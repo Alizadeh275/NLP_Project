@@ -172,7 +172,7 @@ def select_examples_TQA(data, index, passages, passages_index):
     return selected_data
 ```
 
-`select_examples_NQ:
+`select_examples_NQ:`
 ```setup
 def select_examples_NQ(data, index, passages, passages_index):
     selected_data = []
