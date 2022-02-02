@@ -47,6 +47,13 @@ bash APE/scripts/download-data.sh
 bash FiD/get-data.sh
 ```
 
+At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
+
+```setup
+echo "Processing "$ROOT""
+python src/preprocess.py $DOWNLOAD $ROOT
+```
+
 5. Split downloaded data to 8 parts (We will use one of part)
 
 ```setup
