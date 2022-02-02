@@ -14,34 +14,39 @@ __Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper
 
 ## Requirements
 
-To install requirements:
+To install all requirements go to notebooks folder and run this command:
 
 ```setup
 pip install -r requirements.txt
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
-
-1. Clone APE project from github:
+1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
 
 ```setup
 !git clone https://github.com/uclnlp/APE
 ```
 
-2. Clone FiD project from github:
+2. Download APE data using follow bash command:
+```setup
+%%shell
+bash APE/scripts/download-data.sh
+```
+#### Note: There is `no access` to this dataset and it was forbidden!
+
+3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
 
 ```setup
 !git clone https://github.com/facebookresearch/FiD.git
 ```
 
-3. Download FiD data using follow bash command:
+4. Download FiD data using follow bash command:
 
 ```setup
 %%shell
 bash FiD/get-data.sh
 ```
 
-4. Split downloaded data to 8 parts (We will use one of part)
+5. Split downloaded data to 8 parts (We will use one of part)
 
 ```setup
 import pandas as pd
