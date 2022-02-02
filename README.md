@@ -290,7 +290,12 @@ python APE/FiD/test.py \
   --name my_test \
   --checkpoint_dir checkpoint
 ```
-
+> Test Result:
+```result
+[02/01/2022 19:59:57] {test.py:127} INFO - Start eval
+[02/01/2022 20:22:01] {test.py:65} INFO - total number of example 3610
+[02/01/2022 20:22:01] {test.py:136} INFO - EM 39.128542
+```
 ## Pre-trained Models
 
 You can download pretrained models here:
