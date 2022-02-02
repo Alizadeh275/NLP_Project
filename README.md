@@ -99,7 +99,7 @@ if __name__ == "__main__":
     passages = util.load_passages(save_dir/'psgs_w100.tsv')
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
-### 5. So, we decide to split downloaded data to 8 parts (We will use one of part):
+### 5. So, we decide to split downloaded data to 8 equal parts (We will use first part for training):
 
 ```setup
 import pandas as pd
@@ -122,6 +122,18 @@ for i in range(1,number_lines,rowsize):
           chunksize=rowsize)#size of data to append for each loop
 ```
 
+
+### 6. Then we made preprocessing on selected part of data (change data path in FiD/src/preprocess.py):
+
+```setup
+if __name__ == "__main__":
+    dir_path = Path(sys.argv[1])
+    save_dir = Path(sys.argv[2])
+
+    # passages = util.load_passages(save_dir/'psgs_w100.tsv')
+    passages = util.load_passages('input1.csv')
+    passages = {p[0]: (p[1], p[2]) for p in passages}
+```
 ## Training
 
 To train the model(s) in the paper, run this command:
