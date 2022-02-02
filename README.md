@@ -278,13 +278,19 @@ python APE/FiD/train.py \
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
+[`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
 
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
+%%shell
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+python APE/FiD/test.py \
+  --model_path pretrained_models/nq_reader_base \
+  --test_data_path open_domain_data/NQ/test.json \
+  --model_size base \
+  --per_gpu_batch_size 4 \
+  --n_context 1 \
+  --name my_test \
+  --checkpoint_dir checkpoint
+
 
 ## Pre-trained Models
 
