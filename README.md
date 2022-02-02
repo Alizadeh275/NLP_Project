@@ -54,8 +54,8 @@ echo "Processing "$ROOT""
 python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
-That is because when the FiD/src/preprocess.py file wants to load the open_domain/pages_w100.tsv, RAM made full and execution was stopped:
-
+That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
+(Size of psgs_w100.tsv is 10 GB)
 ```setup
 if __name__ == "__main__":
     dir_path = Path(sys.argv[1])
