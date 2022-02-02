@@ -20,11 +20,35 @@ To install all requirements go to notebooks folder and run this command:
 pip install -r requirements.txt
 ```
 
+1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
 
-# Data
+```setup
+!git clone https://github.com/uclnlp/APE
+```
 
-### Download data
-NaturalQuestions and TriviaQA data can be downloaded using [`get-data.sh`](get-data.sh). Both datasets are obtained from the original source and the wikipedia dump is downloaded from the [DPR](https://github.com/facebookresearch/DPR) repository. In addition to the question and answers, this script retrieves the Wikipedia passages used to trained the released pretrained models.
+2. Download APE data using follow bash command:
+```setup
+%%shell
+bash APE/scripts/download-data.sh
+```
+#### Note: There is `no access` to this dataset and it was forbidden!
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
+
+3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
+
+```setup
+!git clone https://github.com/facebookresearch/FiD.git
+```
+
+4. Download FiD data using follow bash command:
+
+```setup
+%%shell
+bash FiD/get-data.sh
+```
+
+
+
 
 ### Data format
 
@@ -57,33 +81,6 @@ Entry example:
 }
 ```
 
-
-1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
-
-```setup
-!git clone https://github.com/uclnlp/APE
-```
-
-2. Download APE data using follow bash command:
-```setup
-%%shell
-bash APE/scripts/download-data.sh
-```
-#### Note: There is `no access` to this dataset and it was forbidden!
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
-
-3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
-
-```setup
-!git clone https://github.com/facebookresearch/FiD.git
-```
-
-4. Download FiD data using follow bash command:
-
-```setup
-%%shell
-bash FiD/get-data.sh
-```
 
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
