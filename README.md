@@ -274,8 +274,6 @@ python APE/FiD/train.py \
 ```  
 
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
 ## Evaluation
 
 [`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
