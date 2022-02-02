@@ -280,6 +280,7 @@ python APE/FiD/train.py \
 
 [`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
 
+```eval
 %%shell
 
 python APE/FiD/test.py \
@@ -290,7 +291,7 @@ python APE/FiD/test.py \
   --n_context 1 \
   --name my_test \
   --checkpoint_dir checkpoint
-
+```
 
 ## Pre-trained Models
 
@@ -304,7 +305,7 @@ You can download pretrained models here:
 
 Our model achieves the following performance on :
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+### [Image Classification on ImageNet])
 
 | Model name         | Top 1 Accuracy  | Top 5 Accuracy |
 | ------------------ |---------------- | -------------- |
