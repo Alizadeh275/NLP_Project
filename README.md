@@ -10,7 +10,7 @@ Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bo
 
 ![alt text](http://url/to/img.png)
 
-Our goal is __reproduce__ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper result.
+__Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper result__.
 
 ## Requirements
 
