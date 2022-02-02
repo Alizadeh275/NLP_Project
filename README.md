@@ -254,7 +254,7 @@ After running of preprocess.py, three files created in open_domain_data/NQ folde
 - train.py
 - test.py
 - dev.py
-- 
+
 ### Train
 
 [`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
