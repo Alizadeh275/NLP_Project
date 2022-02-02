@@ -1,8 +1,16 @@
 # Training Adaptive Computation for Open-Domain Question Answering with Computational Constraints
+ 
+In this repository we tried to compare two paper expriments: [FiD-base](https://arxiv.org/abs/2007.01282) and [APE-FiD-base](https://arxiv.org/abs/2107.02102). Those expriments was done on two datasets:
 
-This repository is the official implementation of [This Paper](https://arxiv.org/abs/2107.02102). 
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+- NaturalQuestions
+- TriviaQA
+
+Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bottom:
+
+![alt text](http://url/to/img.png)
+
+Our goal is __reproduce__ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper result.
 
 ## Requirements
 
