@@ -20,6 +20,8 @@ To install all requirements go to notebooks folder and run this command:
 pip install -r requirements.txt
 ```
 
+## Setup
+
 ### 1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
 
 ```setup
@@ -46,8 +48,6 @@ bash APE/scripts/download-data.sh
 %%shell
 bash FiD/get-data.sh
 ```
-
-
 
 
 ### Data format
