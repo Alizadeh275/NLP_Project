@@ -248,6 +248,8 @@ But we see RAM error again when loading data, So we decide to run NQ and TQA sep
 
 ```
 
+and continue preprocessing on NQ data.
+
 ## Training
 
 To train the model(s) in the paper, run this command:
