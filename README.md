@@ -299,13 +299,6 @@ python APE/FiD/test.py \
 > Conclusion: <br /> The reached EM is lower than APE-FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation. APE-FiD base).
 
 
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
 ## Results
 
@@ -322,4 +315,4 @@ Our model achieves the following performance on :
 
 ## Contributing
 
->📋  Pick a licence and describe how to contribute to your code repository. 
+>📋  You can use another dataset (TriviaQA) to compare FiD-base and APE-FiD-base
