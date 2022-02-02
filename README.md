@@ -134,6 +134,25 @@ if __name__ == "__main__":
     passages = util.load_passages('input1.csv')
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
+
+You should change FiD/src/util.py to load csv file (`reader = csv.reader(fin)`):
+```setup
+def load_passages(path):
+    if not os.path.exists(path):
+        logger.info(f'{path} does not exist')
+        return
+    logger.info(f'Loading passages from: {path}')
+    passages = []
+    with open(path) as fin:
+        reader = csv.reader(fin)
+        for k, row in enumerate(reader):
+            if not row[0] == 'id':
+                try:
+                    passages.append((row[0], row[1], row[2]))
+                except:
+                    logger.warning(f'The following input line has not been correctly loaded: {row}')
+    return passages
+```
 ## Training
 
 To train the model(s) in the paper, run this command:
