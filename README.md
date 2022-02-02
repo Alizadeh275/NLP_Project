@@ -213,6 +213,41 @@ def load_passages(path):
                     logger.warning(f'The following input line has not been correctly loaded: {row}')
     return passages
 ```
+
+But we see RAM error again when loading data, So we decide to run NQ and TQA seperately, So we comment Trivia Loading segment in FiD/src/preprocess.py:
+```setup
+  # #load Trivia question idx
+    # TQA_idx, TQA_passages = {}, {}
+    # for split in ['train', 'dev', 'test']:
+    #     with open(dir_path/('TQA.' + split + '.idx.json'), 'r') as fin:
+    #         TQA_idx[split] = json.load(fin)
+    #     with open(dir_path/'tqa_passages' /  (split + '.json'), 'r') as fin:
+    #         TQA_passages[split] = json.load(fin)
+
+
+    # originaltrain, originaldev = [], []
+    # with open(dir_path/'triviaqa-unfiltered'/'unfiltered-web-train.json') as fin:
+    #     originaltrain = json.load(fin)['Data']
+    
+    # with open(dir_path/'triviaqa-unfiltered'/'unfiltered-web-dev.json') as fin:
+    #     originaldev = json.load(fin)['Data']
+
+    # TQA_train = select_examples_TQA(originaltrain, TQA_idx['train'], passages, TQA_passages['train'])
+    # TQA_dev = select_examples_TQA(originaltrain, TQA_idx['dev'], passages, TQA_passages['dev'])
+    # TQA_test = select_examples_TQA(originaldev, TQA_idx['test'], passages, TQA_passages['test'])
+   
+    # TQA_save_path = save_dir / 'TQA'
+    # TQA_save_path.mkdir(parents=True, exist_ok=True)
+
+    # with open(TQA_save_path/'train.json', 'w') as fout:
+    #     json.dump(TQA_train, fout, indent=4)
+    # with open(TQA_save_path/'dev.json', 'w') as fout:
+    #     json.dump(TQA_dev, fout, indent=4)
+    # with open(TQA_save_path/'test.json', 'w') as fout:
+    #     json.dump(TQA_test, fout, indent=4)
+
+```
+
 ## Training
 
 To train the model(s) in the paper, run this command:
