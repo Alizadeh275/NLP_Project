@@ -138,6 +138,63 @@ if __name__ == "__main__":
 We do not consider all passages, so  we should consider index of existed passages,<br /> 
 So we should change `select_examples_NQ` and `select_examples_TQA` methods in FiD/src/preprocess.py like this:<br /> (add this condition `if idx in passages`)
 
+`select_examples_TQA:`
+```setup
+def select_examples_TQA(data, index, passages, passages_index):
+    selected_data = []
+    for i, k in enumerate(index):
+        ex = data[k]
+        q = ex['Question']
+        answers = ex['Answer']['Aliases']
+        target = ex['Answer']['Value']
+
+        ctxs = [
+                  {
+                    
+                      'id': idx,
+                      'title': passages[idx][1],
+                      'text': passages[idx][0],
+                  }
+                  for idx in passages_index[ex['QuestionId']] if idx in passages
+                  
+              ]
+
+        if target.isupper():
+            target = target.title()
+        selected_data.append(
+            {
+                'question': q,
+                'answers': answers,
+                'target': target,
+                'ctxs': ctxs,
+            }
+        )
+    return selected_data
+```
+
+`select_examples_NQ:
+```setup
+def select_examples_NQ(data, index, passages, passages_index):
+    selected_data = []
+    for i, k in enumerate(index):
+        ctxs = [
+                {
+                    'id': idx,
+                    'title': passages[idx][1],
+                    'text': passages[idx][0],
+                }
+                for idx in passages_index[str(i)] if idx in passages
+            ]
+        dico = {
+            'question': data[k]['question'],
+            'answers': data[k]['answer'],
+            'ctxs': ctxs,
+        }
+        selected_data.append(dico)
+
+    return selected_data
+```
+
 You should change FiD/src/util.py to load csv file (`reader = csv.reader(fin)`):
 ```setup
 def load_passages(path):
