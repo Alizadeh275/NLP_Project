@@ -250,10 +250,11 @@ But we see RAM error again when loading data, So we decide to run NQ and TQA sep
 
 and continue preprocessing on NQ data.
 <br />
-After running of preprocess.py, three files created in open_domain_data/NQ:
+After running of preprocess.py, three files created in open_domain_data/NQ folder:
 - train.py
 - test.py
 - dev.py
+- 
 ## Training
 
 To train the model(s) in the paper, run this command:
