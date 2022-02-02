@@ -55,7 +55,7 @@ python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
 That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
-(Size of psgs_w100.tsv is 10 GB)
+(The psgs_w100.tsv is containing of passages and size of that is 10 GB)
 ```setup
 if __name__ == "__main__":
     dir_path = Path(sys.argv[1])
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     passages = util.load_passages(save_dir/'psgs_w100.tsv')
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
-5. Split downloaded data to 8 parts (We will use one of part)
+5. So, we decide to split downloaded data to 8 parts (We will use one of part):
 
 ```setup
 import pandas as pd
