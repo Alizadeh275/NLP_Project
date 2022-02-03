@@ -255,7 +255,7 @@ After running of preprocess.py, three files created in open_domain_data/NQ folde
 - test.py
 - dev.py
 
-### Train (APE-FiD-base)
+## Train (APE-FiD-base)
 
 [`train.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/APE-FiD-base/FiD/train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
