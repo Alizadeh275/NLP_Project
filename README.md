@@ -302,15 +302,14 @@ python APE/FiD/test.py \
 
 ## Results
 
-Our model achieves the following performance on :
+> Exact match scores on NaturalQuestions  test sets.
 
-### [Image Classification on ImageNet])
-
-| Model name         | EM on NaturalQuestions (Test dataset)  |
+| Model name         | EM on NaturalQuestions (test set)  |
 | ------------------ |---------------- |
 | APE-FiD-base   |     39.128542 %         |
 | FiD-base   |     35.86 %         |
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+
+
 
 
 ## Contributing
