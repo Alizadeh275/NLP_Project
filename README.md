@@ -81,7 +81,7 @@ Entry example:
 }
 ```
 
-> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
+> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
 ```setup
@@ -89,7 +89,7 @@ echo "Processing "$ROOT""
 python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
-That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
+That is because when the [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
 (The psgs_w100.tsv is containing of passages and size of that is 10 GB)
 ```setup
 if __name__ == "__main__":
@@ -123,7 +123,7 @@ for i in range(1,number_lines,rowsize):
 ```
 
 
-### 6. Then we made preprocessing on selected part of data (change data path in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py)):
+### 6. Then we made preprocessing on selected part of data (change data path in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py)):
 
 ```setup
 if __name__ == "__main__":
@@ -136,7 +136,7 @@ if __name__ == "__main__":
 ```
 
 We do not consider all passages, so  we should consider index of existed passages,<br /> 
-So we should change `select_examples_NQ` and `select_examples_TQA` methods in FiD/src/preprocess.py like this:<br /> (add this condition `if idx in passages`)
+So we should change `select_examples_NQ` and `select_examples_TQA` methods in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) like this:<br /> (add this condition `if idx in passages`)
 
 `select_examples_TQA:`
 ```setup
@@ -195,7 +195,7 @@ def select_examples_NQ(data, index, passages, passages_index):
     return selected_data
 ```
 
-You should change [util.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/util.py) to load csv file (`reader = csv.reader(fin)`):
+You should change [util.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/util.py) to load csv file (`reader = csv.reader(fin)`):
 ```setup
 def load_passages(path):
     if not os.path.exists(path):
@@ -214,7 +214,7 @@ def load_passages(path):
     return passages
 ```
 
-But we see RAM error again when loading data, So we decide to run NQ and TQA seperately, So we comment Trivia Loading segment in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py):
+But we see RAM error again when loading data, So we decide to run NQ and TQA seperately, So we comment Trivia Loading segment in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) :
 ```setup
   # #load Trivia question idx
     # TQA_idx, TQA_passages = {}, {}
