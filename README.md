@@ -81,7 +81,7 @@ Entry example:
 }
 ```
 
-
+> Note: Data files are seprate from each other and preprcess.py gathered all sepreted data and form all data according to above data format
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
 ```setup
@@ -352,10 +352,10 @@ python FiD/test_reader.py \
 
 > Exact match scores on NaturalQuestions  test sets.
 
-| Model name         | EM on NaturalQuestions (test set)  |
-| ------------------ |---------------- |
-| APE-FiD-base   |     39.128542 %         |
-| FiD-base   |     35.86 %         |
+| Model name         | EM on NaturalQuestions (test set)  | Evaluation Time |
+| ------------------ |---------------- |---------------- |
+| APE-FiD-base   |     39.128542 %         | 23 Min |
+| FiD-base   |     35.86 %         | 17 Min |
 
 
 
