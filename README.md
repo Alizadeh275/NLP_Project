@@ -81,12 +81,12 @@ Entry example:
 }
 ```
 
-> Note: Data files are seprate from each other and preprcess.py gathered all sepreted data and form all data according to above data format
+> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
 ```setup
 echo "Processing "$ROOT""
-python [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py) $DOWNLOAD $ROOT
+python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
 That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
