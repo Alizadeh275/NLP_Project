@@ -308,7 +308,7 @@ python FiD/train_reader.py \
         --name my_experiment \
         --checkpoint_dir checkpoint \
         --use_checkpoint 
- ```     
+```     
 > Test Result:
 ```eval
 [02/01/2022 19:59:57] {test.py:127} INFO - Start eval
