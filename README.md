@@ -99,7 +99,7 @@ if __name__ == "__main__":
     passages = util.load_passages(save_dir/'psgs_w100.tsv')
     passages = {p[0]: (p[1], p[2]) for p in passages}
 ```
-### 5. So, we decide to split downloaded data to 8 equal parts (We will use first part for training):
+### 5. So, we decide to split passages data to 8 equal parts (We will use first part for training):
 
 ```setup
 import pandas as pd
