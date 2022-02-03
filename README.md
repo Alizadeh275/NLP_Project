@@ -81,7 +81,7 @@ Entry example:
 }
 ```
 
-> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
+> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
 ```setup
@@ -89,7 +89,8 @@ echo "Processing "$ROOT""
 python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
-That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
+That is because when the [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
+
 (The psgs_w100.tsv is containing of passages and size of that is 10 GB)
 ```setup
 if __name__ == "__main__":
@@ -123,7 +124,7 @@ for i in range(1,number_lines,rowsize):
 ```
 
 
-### 6. Then we made preprocessing on selected part of data (change data path in FiD/src/preprocess.py):
+### 6. Then we made preprocessing on selected part of data (change data path in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py)):
 
 ```setup
 if __name__ == "__main__":
