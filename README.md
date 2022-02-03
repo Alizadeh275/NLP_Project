@@ -8,7 +8,7 @@ In this repository we tried to compare two paper expriments: [FiD-base](https://
 
 Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bottom:
 
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/paper_results.PNG)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/screenshots/paper_results.PNG)
 
 __Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results__.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 bash APE/scripts/download-data.sh
 ```
 #### Note: There is `no access` to this dataset and it was forbidden!
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/screenshots/forbidden_message.PNG)
 
 ### 3. Clone [FiD-base](https://github.com/facebookresearch/FiD.git) project from github:
 
