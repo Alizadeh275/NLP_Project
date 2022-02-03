@@ -8,7 +8,7 @@ In this repository we tried to compare two paper expriments: [FiD-base](https://
 
 Result of  [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper is shown in bottom:
 
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/screenshots/paper_results.PNG)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/paper_results.PNG)
 
 __Our goal is _reproduce_ [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results__.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 bash APE/scripts/download-data.sh
 ```
 #### Note: There is `no access` to this dataset and it was forbidden!
-![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/screenshots/forbidden_message.PNG)
+![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
 
 ### 3. Clone [FiD-base](https://github.com/facebookresearch/FiD.git) project from github:
 
@@ -81,7 +81,7 @@ Entry example:
 }
 ```
 
-> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
+> Note: Data files are seprate from each other and [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py) gathered all sepreted data and form all data according to above data format
 At the end of get-data.sh file, following codes made the RAM  full and preprocessing was stopped:
 
 ```setup
@@ -89,8 +89,7 @@ echo "Processing "$ROOT""
 python src/preprocess.py $DOWNLOAD $ROOT
 ```
 
-That is because when the [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py) file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
-
+That is because when the FiD/src/preprocess.py file wants to load the open_domain/psgs_w100.tsv, RAM made full and execution was stopped:
 (The psgs_w100.tsv is containing of passages and size of that is 10 GB)
 ```setup
 if __name__ == "__main__":
@@ -124,7 +123,7 @@ for i in range(1,number_lines,rowsize):
 ```
 
 
-### 6. Then we made preprocessing on selected part of data (change data path in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/src/preprocess.py)):
+### 6. Then we made preprocessing on selected part of data (change data path in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py)):
 
 ```setup
 if __name__ == "__main__":
@@ -196,7 +195,7 @@ def select_examples_NQ(data, index, passages, passages_index):
     return selected_data
 ```
 
-You should change FiD/src/util.py to load csv file (`reader = csv.reader(fin)`):
+You should change [util.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/util.py) to load csv file (`reader = csv.reader(fin)`):
 ```setup
 def load_passages(path):
     if not os.path.exists(path):
@@ -215,7 +214,7 @@ def load_passages(path):
     return passages
 ```
 
-But we see RAM error again when loading data, So we decide to run NQ and TQA seperately, So we comment Trivia Loading segment in FiD/src/preprocess.py:
+But we see RAM error again when loading data, So we decide to run NQ and TQA seperately, So we comment Trivia Loading segment in [preprocess.py](https://github.com/Alizadeh275/NLP_Project/notebooks/FiD-base/src/preprocess.py):
 ```setup
   # #load Trivia question idx
     # TQA_idx, TQA_passages = {}, {}
@@ -258,7 +257,7 @@ After running of preprocess.py, three files created in open_domain_data/NQ folde
 
 ### Train (APE-FiD-base)
 
-[`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
+[`train.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/APE-FiD-base/FiD/train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
 ```shell
 %%shell
@@ -277,7 +276,7 @@ python APE/FiD/train.py \
 
 ## Evaluation (APE-FiD-base)
 
-[`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
+[`test.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/APE-FiD-base/FiD/test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
 
 ```eval
 %%shell
@@ -296,7 +295,7 @@ Now we examine FiD-base project. First train the model and then evaluate it.
 
 ### Train (FiD-base)
 
-[`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
+[`train_reader.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/train_reader.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
 ```shell
 %%shell
@@ -322,7 +321,7 @@ python FiD/train_reader.py \
 
 ## Evaluation (FiD-base)
 
-[`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
+[`test_reader.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/test_reader.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
 
 ```eval
 %%shell
