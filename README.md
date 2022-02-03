@@ -255,7 +255,7 @@ After running of preprocess.py, three files created in open_domain_data/NQ folde
 - test.py
 - dev.py
 
-### Train
+### Train (APE-FiD-base)
 
 [`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
@@ -274,7 +274,7 @@ python APE/FiD/train.py \
 ```  
 
 
-## Evaluation
+## Evaluation (APE-FiD-base)
 
 [`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
 
@@ -290,13 +290,53 @@ python APE/FiD/test.py \
   --name my_test \
   --checkpoint_dir checkpoint
 ```
+
+Now we examine FiD-base project. First train the model and then evaluate it.
+
+### Train (FiD-base)
+
+[`train.py`](train.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
+
+```shell
+%%shell
+python FiD/train_reader.py \
+        --train_data open_domain_data/NQ/train.json \
+        --eval_data open_domain_data/NQ/dev.json \
+        --model_size base \
+        --per_gpu_batch_size 1 \
+        --n_context 1 \
+        --name my_experiment \
+        --checkpoint_dir checkpoint \
+        --use_checkpoint 
+ ```       
+
+
+## Evaluation (FiD-base)
+
+[`test.py`](test.py) provides the script to evaluate the performance of the model. An example usage of the script is provided below.
+
+```eval
+%%shell
+
+
+
+python FiD/test_reader.py \
+  --model_path pretrained_models/nq_reader_base \
+  --eval_data open_domain_data/NQ/test.json \
+  --model_size base \
+  --per_gpu_batch_size 1 \
+  --n_context 100 \
+  --name my_test \
+  --checkpoint_dir checkpoint
+```
+
+
 > Test Result:
 ```result
-[02/01/2022 19:59:57] {test.py:127} INFO - Start eval
-[02/01/2022 20:22:01] {test.py:65} INFO - total number of example 3610
-[02/01/2022 20:22:01] {test.py:136} INFO - EM 39.128542
+[02/02/2022 19:06:33] {test_reader.py:128} INFO - Start eval
+[02/02/2022 19:23:47] {test_reader.py:136} INFO - EM 35.86, Total number of example 3610
 ```
-> Conclusion: <br /> The reached EM is lower than APE-FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation).
+> Conclusion: <br /> The reached EM is lower than FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation).
 
 
 
