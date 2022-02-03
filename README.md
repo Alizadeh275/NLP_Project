@@ -306,7 +306,7 @@ Our model achieves the following performance on :
 
 ### [Image Classification on ImageNet])
 
-| Model name         | NaturalQuestions (Test dataset)  |
+| Model name         | EM on NaturalQuestions (Test dataset)  |
 | ------------------ |---------------- |
 | APE-FiD-base   |     39.128542 %         |
 | FiD-base   |     35.86 %         |
