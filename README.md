@@ -304,7 +304,7 @@ python APE/FiD/test.py \
 
 Now we examine FiD-base project. First train the model and then evaluate it.
 
-### Train (FiD-base)
+## Train (FiD-base)
 
 [`train_reader.py`](https://github.com/Alizadeh275/NLP_Project/blob/main/templates/FiD-base/train_reader.py) provides the code for training a model from scratch. An example usage of the script with some options is given below:
 
@@ -359,11 +359,9 @@ python FiD/test_reader.py \
 | APE-FiD-base   |     39.128542 %         | 23 Min |
 | FiD-base   |     35.86 %         | 17 Min |
 
-> Conclusion: We can see that APE-FiD-base EM is better than the FiD-base (like [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results), but FiD-base runtime is lower that APE-FiD-base runtime.
-<br /> The results we obtained were lower than the results of the original paper (due to memory constraints we had to experiment on a small portion of the data) and therefore we expected the results to be different from the results of the original paper.
+> __Conclusion__: We can see that APE-FiD-base EM is better than the FiD-base (like [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results), but FiD-base runtime is lower that APE-FiD-base runtime.
+> __Note__:The results we obtained were lower than the results of the original paper (due to memory constraints we had to experiment on a small portion of the data) and therefore we expected the results to be different from the results of the original paper.
 Of course, our results showed the superiority of the proposed method of the original paper, and we observed in our experiments this superiority of the proposed method in the test set data.
-
-> __Note__: Our result is based on 1/8 data.
 
 
 ## Contributing
