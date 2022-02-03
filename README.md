@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Setup
 
-### 1. Clone [APE-FiD-base](https://arxiv.org/abs/2107.02102) project from github:
+### 1. Clone [APE-FiD-base](https://github.com/uclnlp/APE) project from github:
 
 ```setup
 !git clone https://github.com/uclnlp/APE
@@ -36,7 +36,7 @@ bash APE/scripts/download-data.sh
 #### Note: There is `no access` to this dataset and it was forbidden!
 ![alt text](https://github.com/Alizadeh275/NLP_Project/blob/main/APE-base%20result/forbidden_message.PNG)
 
-### 3. Clone [FiD-base](https://arxiv.org/abs/2007.01282) project from github:
+### 3. Clone [FiD-base](https://github.com/facebookresearch/FiD.git) project from github:
 
 ```setup
 !git clone https://github.com/facebookresearch/FiD.git
