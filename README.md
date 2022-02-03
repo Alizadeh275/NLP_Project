@@ -291,6 +291,17 @@ python APE/FiD/test.py \
   --checkpoint_dir checkpoint
 ```
 
+> Test Result:
+```eval
+[02/01/2022 19:59:57] {test.py:127} INFO - Start eval
+[02/01/2022 20:22:01] {test.py:65} INFO - total number of example 3610
+[02/01/2022 20:22:01] {test.py:136} INFO - EM 39.128542
+```
+
+> Conclusion: <br /> The reached EM is lower than APE-FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation).
+
+
+
 Now we examine FiD-base project. First train the model and then evaluate it.
 
 ### Train (FiD-base)
@@ -309,15 +320,6 @@ python FiD/train_reader.py \
         --checkpoint_dir checkpoint \
         --use_checkpoint 
 ```     
-> Test Result:
-```eval
-[02/01/2022 19:59:57] {test.py:127} INFO - Start eval
-[02/01/2022 20:22:01] {test.py:65} INFO - total number of example 3610
-[02/01/2022 20:22:01] {test.py:136} INFO - EM 39.128542
-```
-
-> Conclusion: <br /> The reached EM is lower than APE-FiD-base result, and we think it is because that we do expriments on small parts of data (due to RAM limitation).
-
 
 ## Evaluation (FiD-base)
 
