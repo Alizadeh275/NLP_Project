@@ -357,7 +357,7 @@ python FiD/test_reader.py \
 | APE-FiD-base   |     39.128542 %         | 23 Min |
 | FiD-base   |     35.86 %         | 17 Min |
 
-> Conclusion: We can see that APE-FiD-base EM is better than the FiD-base (like APE-FiD-base paper results), but FiD-base runtime is lower that APE-FiD-base runtime.
+> Conclusion: We can see that APE-FiD-base EM is better than the FiD-base (like [APE-FiD-base](https://arxiv.org/abs/2107.02102) paper results), but FiD-base runtime is lower that APE-FiD-base runtime.
 > __Note__: Our result is based on 1/8 data.
 
 
